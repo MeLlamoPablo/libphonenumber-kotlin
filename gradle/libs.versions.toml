@@ -13,11 +13,11 @@ org-kodein-mock-mockmp = { id = "org.kodein.mock.mockmp", version.ref = "mockmp"
 [versions]
 
 kotlin = "1.9.21"
-agp = "8.2.1"
+agp = "8.3.0"
 compose-jb = "1.5.11"
 vanniktech-publish = "0.27.0"
 okio = "3.7.0"
-multiplatform-resources = "0.23.0"
+multiplatform-resources = "0.24.1"
 mockmp = "1.16.0"
 kermit = "2.0.2"
 

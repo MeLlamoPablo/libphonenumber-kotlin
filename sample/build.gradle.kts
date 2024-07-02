@@ -216,7 +216,7 @@ android {
 }
 
 multiplatformResources {
-    multiplatformResourcesPackage = "io.michaelrocks.libphonenumber.sample"
+    resourcesPackage.set("io.michaelrocks.libphonenumber.sample")
 }
 
 // todo: Remove when resolved: https://github.com/icerockdev/moko-resources/issues/372

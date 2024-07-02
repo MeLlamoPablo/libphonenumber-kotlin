@@ -58,5 +58,5 @@ kotlin {
 }
 
 multiplatformResources {
-    multiplatformResourcesPackage = "io.michaelrocks.libphonenumber.test"
+    resourcesPackage.set("io.michaelrocks.libphonenumber.test")
 }

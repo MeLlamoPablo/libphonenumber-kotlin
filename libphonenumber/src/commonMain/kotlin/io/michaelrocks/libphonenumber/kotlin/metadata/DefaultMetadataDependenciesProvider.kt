@@ -18,7 +18,14 @@ package io.michaelrocks.libphonenumber.kotlin.metadata
 
 import io.michaelrocks.libphonenumber.kotlin.MetadataLoader
 import io.michaelrocks.libphonenumber.kotlin.metadata.init.MetadataParser.Companion.newLenientParser
-import io.michaelrocks.libphonenumber.kotlin.metadata.source.*
+import io.michaelrocks.libphonenumber.kotlin.metadata.source.FormattingMetadataSource
+import io.michaelrocks.libphonenumber.kotlin.metadata.source.FormattingMetadataSourceImpl
+import io.michaelrocks.libphonenumber.kotlin.metadata.source.MetadataSource
+import io.michaelrocks.libphonenumber.kotlin.metadata.source.MetadataSourceImpl
+import io.michaelrocks.libphonenumber.kotlin.metadata.source.MultiFileModeResourceProvider
+import io.michaelrocks.libphonenumber.kotlin.metadata.source.PhoneMetadataResourceProvider
+import io.michaelrocks.libphonenumber.kotlin.metadata.source.RegionMetadataSource
+import io.michaelrocks.libphonenumber.kotlin.metadata.source.RegionMetadataSourceImpl
 import kotlin.jvm.JvmOverloads
 
 /**
@@ -29,15 +36,15 @@ class DefaultMetadataDependenciesProvider @JvmOverloads constructor(metadataLoad
     val metadataParser = newLenientParser()
     val metadataLoader: MetadataLoader
     val phoneNumberMetadataFileNameProvider: PhoneMetadataResourceProvider = MultiFileModeResourceProvider(
-        "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto"
+        "PhoneNumberMetadataProto"
     )
     val phoneNumberMetadataSource: MetadataSource
     val shortNumberMetadataFileNameProvider: PhoneMetadataResourceProvider = MultiFileModeResourceProvider(
-        "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto"
+        "ShortNumberMetadataProto"
     )
     val shortNumberMetadataSource: RegionMetadataSource
     val alternateFormatsMetadataFileNameProvider: PhoneMetadataResourceProvider = MultiFileModeResourceProvider(
-        "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto"
+        "PhoneNumberAlternateFormatsProto"
     )
     val alternateFormatsMetadataSource: FormattingMetadataSource
 

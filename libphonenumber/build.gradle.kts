@@ -115,6 +115,10 @@ kotlin {
             }
         }
     }
+
+    multiplatformResources {
+        resourcesPackage.set("io.michaelrocks.libphonenumber")
+    }
 }
 
 android {
@@ -147,10 +151,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-}
-
-multiplatformResources {
-    multiplatformResourcesPackage = "io.michaelrocks.libphonenumber"
 }
 
 mockmp {
