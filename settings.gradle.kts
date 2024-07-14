@@ -26,4 +26,3 @@ plugins {
 
 include(":libphonenumber")
 include(":library-test-resources")
-include(":sample")
